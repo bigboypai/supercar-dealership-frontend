@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Grid } from '@mui/material';
-import CarCard from './components/carCard';
+import CarCard from './carCard';
 
-function App() {
+function CardContainer() {
   const [cars, setCars] = useState([]);
 
   useEffect(() => {
@@ -30,4 +30,4 @@ function App() {
   );
 }
 
-export default App;
+export default CardContainer;
