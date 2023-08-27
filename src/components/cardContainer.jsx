@@ -2,22 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Grid } from '@mui/material';
 import CarCard from './carCard';
 
-function CardContainer() {
-  const [cars, setCars] = useState([]);
-
-  useEffect(() => {
-    async function fetchCars() {
-      try {
-        const response = await fetch('http://localhost:3000/api/cars'); // Change the URL to your API endpoint
-        const data = await response.json();
-        setCars(data);
-      } catch (error) {
-        console.error('Error fetching cars:', error);
-      }
-    }
-
-    fetchCars();
-  }, []);
+function CardContainer({cars}) {
 
   return (
     <Grid container spacing={3}>
