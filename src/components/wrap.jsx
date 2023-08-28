@@ -1,4 +1,7 @@
 import CardContainer from './cardContainer';
+import NavBar from './navBar';
+import PageContentHeader from './pageContentHeader';
+import Separator from './separator';
 import { useState, useEffect } from 'react'
 
 const Wrap = () => {
@@ -7,7 +10,7 @@ const Wrap = () => {
     useEffect(() => {
       async function fetchData() {
         try {
-          const response = await fetch('http://localhost:3000/api/cars'); // Change the URL to your API endpoint
+          const response = await fetch('http://localhost:3000/api/cars');
           const data = await response.json();
           setData(data);
         } catch (error) {
@@ -20,7 +23,13 @@ const Wrap = () => {
     
     
   return (
-    <CardContainer cars={data}/>
+    <>
+      <NavBar />
+      <PageContentHeader />
+      <Separator text="LATEST ARRIVALS FOR SALE"/>
+      <CardContainer cars={data}/>
+      <Separator text="LATEST COMPANY NEWS"/>
+      </>
   )
 }
 

@@ -22,6 +22,7 @@ function CarCard({ car }) {
         justifyContent: 'space-between',
         height: '100%',
         position: 'relative',
+        cursor: 'pointer'
       }}
     >
       <CardMedia
@@ -37,7 +38,6 @@ function CarCard({ car }) {
             bottom: 0,
             left: 0,
             right: 0,
-            backgroundColor: 'rgba(0, 0, 0, 0.7)',
             color: 'white',
             padding: 2,
             display: 'flex',
@@ -48,7 +48,7 @@ function CarCard({ car }) {
           <Typography gutterBottom variant="h6">
             {car.car_info.make} {car.car_info.model}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
+          <Typography variant="body2" color="white">
             Units Built: {car.car_info.units_built}
           </Typography>
         </CardContent>
