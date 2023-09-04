@@ -3,31 +3,34 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import CardContainer from './cardContainer';
 import CarDetail from './CarDetail';
 
-const App = () => {
-  const [data, setData] = useState([]);
+function App() {
+  const [cars, setCars] = useState([]);
 
   useEffect(() => {
-    async function fetchData() {
+    const fetchData = async () => {
       try {
         const response = await fetch('http://localhost:3000/api/cars');
         const data = await response.json();
-        setData(data);
+        setCars(data);
       } catch (error) {
-        console.error('Error fetching cars:', error);
+        console.error('Error fetching data: ', error);
       }
-    }
+    };
 
     fetchData();
   }, []);
 
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<CardContainer cars={data} />} />
-        <Route path="/cars/:carId" element={<CarDetail cars={data} />} />
-      </Routes>
-    </Router>
+    <div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<CardContainer cars={cars} />} />
+          <Route path="/cars/:carId" element={<CarDetail cars={cars} />} />
+        </Routes>
+      </Router>
+    </div>
   );
 }
+
 
 export default App;
