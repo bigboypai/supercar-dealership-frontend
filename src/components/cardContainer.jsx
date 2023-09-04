@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Grid } from '@mui/material';
-import CarCard from './CarCard'; // Make sure the import matches your file name
+import CarCard from './CarCard';
 import { Link } from 'react-router-dom'
 
 
