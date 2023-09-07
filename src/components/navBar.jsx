@@ -10,12 +10,8 @@ const navBar = () => {
                 <span> <h2> Fuji Motors </h2> </span>
             </span>
 
-            <span className='search-bar'>
-                <span> Buscar </span>
-                <span>
-                    <img style={{height: '25px'}} src='https://assets.stickpng.com/images/585e4ae1cb11b227491c3393.png'/>
-                </span>
-            </span>
+            <input type='text' className='search-bar' placeholder={"Buscar vehículos"}>
+            </input>
 
             <span className='log-in-btn'>
                 <img src='https://cdn-icons-png.flaticon.com/512/5509/5509636.png'/>

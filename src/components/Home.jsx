@@ -7,8 +7,10 @@ import Makes from "./Makes"
 const Home = ({ cars }) => {
   return (
     <>
-        <NavBar />
-        <Makes />
+        <div >
+          <NavBar />
+          <Makes />
+        </div>
         {/* <PageContentHeader />
         <Separator text={"New arrivals"}/>
         <CardContainer cars={cars} />

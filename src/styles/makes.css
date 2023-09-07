@@ -1,20 +1,59 @@
-.makes-ul {
-    display: flex;
-    justify-content: space-evenly;
-
-    list-style-type: none;
-    padding: 15px;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Prata', serif;
 }
-.makes-ul li {
-    padding: 10px 50px;
-    border-radius: 25px;
+
+.makes-ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    /* padding: 5px; */
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  .makes-ul li {
+    display: inline-block;
     cursor: pointer;
     transition: 250ms ease-in-out;
-}
-.makes-ul li:hover {
+    border-radius: 25px;
+    padding: 5px 25px;
+  }
+  
+  .makes-ul li:hover {
     background-color: rgb(164, 164, 164);
-}
-.makes-link {
+  }
+  
+  .makes-link {
     text-decoration: none;
     color: black;
-}
+  }
+  
+  /* Media query for mobile and tablet screens */
+  @media (max-width: 768px) {
+    .makes-ul {
+      animation: slide-in 1s forwards;
+    }
+  
+    .makes-ul li {
+      margin-right: 5px;
+    }
+  
+    @keyframes slide-in {
+      from {
+        transform: translateX(100%);
+      }
+      to {
+        transform: translateX(0);
+      }
+    }
+  }
+  

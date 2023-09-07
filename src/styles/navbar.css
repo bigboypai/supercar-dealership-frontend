@@ -16,7 +16,7 @@
     justify-content: space-around;
     padding: 15px;
 
-    background-color: rgb(205, 205, 205);
+    /* background-color: rgb(205, 205, 205); */
 }
 
 .hamburguer-menu {
@@ -37,15 +37,13 @@
     width: 400px;
     background-color: aliceblue;
     border-radius: 25px;
+    outline: none;
 
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     color: rgb(96, 95, 95);
-}
-.search-bar span {
-    margin-left: 10px;
-    margin-right: 10px;
 }
 
 .log-in-btn {
