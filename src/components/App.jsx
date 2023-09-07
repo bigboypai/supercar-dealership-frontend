@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import CardContainer from './cardContainer';
 import CarDetail from './CarDetail';
+import Home from './Home';
 
 function App() {
   const [cars, setCars] = useState([]);
@@ -24,7 +24,7 @@ function App() {
     <div>
       <Router>
         <Routes>
-          <Route path="/" element={<CardContainer cars={cars} />} />
+          <Route path="/" element={<Home cars={cars} />} />
           <Route path="/cars/:carId" element={<CarDetail cars={cars} />} />
         </Routes>
       </Router>

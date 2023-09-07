@@ -28,7 +28,7 @@ function CarCard({ car }) {
       <CardMedia
         component="img"
         height="250"
-        image={car.car_info.image[0]} // Change this to the appropriate image URL
+        image={car.pictures[0]}
         alt={`${car.car_info.make} ${car.car_info.model}`}
       />
       {hovered && (
@@ -49,7 +49,6 @@ function CarCard({ car }) {
             {car.car_info.make} {car.car_info.model}
           </Typography>
           <Typography variant="body2" color="white">
-            Units Built: {car.car_info.units_built}
           </Typography>
         </CardContent>
       )}

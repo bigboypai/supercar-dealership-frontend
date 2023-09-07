@@ -9,7 +9,7 @@ const navBar = () => {
                 <li className='navbar-logo'>
                     <h2>SUPERCAR</h2>
                     <div className="logo-flags">
-                        <span className="logo-flags--green"></span>
+                        <span className="logo-flags--blue"></span>
                         <span className="logo-flags--white"></span>
                         <span className="logo-flags--red"></span>
                     </div>

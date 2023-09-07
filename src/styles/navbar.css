@@ -29,12 +29,12 @@
         align-items: center;
         justify-content: space-between;
     }
-    .logo-flags--green, .logo-flags--white, .logo-flags--red {
+    .logo-flags--blue, .logo-flags--white, .logo-flags--red {
         height: 2px;
         width: 30%;
     }
-    .logo-flags--green {
-        background-color: green;
+    .logo-flags--blue {
+        background-color: blue;
     }
     .logo-flags--white {
         background-color: white;

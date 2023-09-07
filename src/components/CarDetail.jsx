@@ -2,19 +2,12 @@ import { useParams } from 'react-router-dom'
 import CardDetailCarousel from './CardDetailCarousel';
 import NavBar from './navBar'
 import Separator from './Separator';
+import '../styles/CarDetail.css'
 
 function CarDetail({ cars }) {
   const { carId } = useParams();
   const car = cars.find((car) => car._id === carId);
-  const images = [
-    "https://wearecurated.b-cdn.net/wp-content/uploads/AH2I1035-Edit-scaled.jpg",
-    "https://wearecurated.com/wp-content/uploads/AH2I1091-2-scaled.jpeg",
-    "https://wearecurated.com/wp-content/uploads/AH2I1043-scaled.jpeg",
-    "https://wearecurated.com/wp-content/uploads/AH2I1083-scaled.jpeg",
-    "https://wearecurated.com/wp-content/uploads/AH2I1075-Edit-scaled.jpeg",
-    "https://wearecurated.com/wp-content/uploads/DSC09740-1-scaled.jpeg",
-    "https://wearecurated.com/wp-content/uploads/DSC09743-1-scaled.jpeg"
-    ]
+  const images = car.pictures
 
   if (!car) {
     return <div>Car not found</div>;
@@ -23,14 +16,19 @@ function CarDetail({ cars }) {
   return (
     <>
       <NavBar />
-      <Separator text={`${car.car_specs.year} ${car.car_info.make} ${car.car_info.model}`}/>
-      <div className='car-detail-info'>
-        <p>Year: {car.car_specs.year}</p>
-        <p>Manufacturer: {car.car_info.make}</p>
-        <p>Model: {car.car_info.model}</p>
-      </div>
+      <Separator text={`${car.car_info.make} ${car.car_info.model} ${car.car_info.year}`}/>
       <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
         <CardDetailCarousel images={images} />
+      </div>
+      <div className='car-info'>
+        <div className='car-detail-info'>
+          <p>Marca: {car.car_info.make}</p>
+          <p>Model: {car.car_info.model}</p>
+          <p>Odómetro: {car.car_info.odometer} km</p>
+          <p>Año: {car.car_info.year}</p>
+          <p>Transmisión: {car.car_info.transmission}</p>
+        </div>
+        <div> { car.car_info.description ? <p>Descripción: {car.car_info.description}</p> : null } </div>
       </div>
     </>
   );

@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.car-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+
+    padding: 25px;
+}
+
+.car-detail-info {
+    border-radius: 10px;
+    width: 90vw;
+    max-width: 400px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: rgb(240, 240, 240);
+}
+
+/* Media query for screens 768px and above (tablets and larger) */
+@media screen and (min-width: 768px) {
+    .car-detail-info {
+        width: 70vw;
+    }
+    .car-info {
+        flex-direction: row;
+    }
+}
+
+/* Media query for screens 1024px and above (small laptops and larger) */
+@media screen and (min-width: 1024px) {
+    .car-detail-info {
+        width: 50vw;
+    }
+    .car-info {
+        flex-direction: row;
+    }
+}
