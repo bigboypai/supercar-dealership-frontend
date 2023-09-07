@@ -1,0 +1,27 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.home-banner-container {
+    background-image: url(https://wearecurated.b-cdn.net/wp-content/uploads/DSC09229-Edit.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    height: 50vh;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    color: white;
+    padding: 15px;
+}
+.home-banner-container h1 {
+    color: rgb(243, 243, 243);
+}
+.home-banner-container p {
+    font-size: small;
+}

@@ -13,55 +13,43 @@
 .navbar-container {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    padding: 15px;
+    justify-content:space-evenly;
 
-    /* background-color: rgb(205, 205, 205); */
+    padding: 15px;
 }
 
-.hamburguer-menu {
+.key-menu {
     height: 50px;
 }
 
 .navbar-logo {
-    color: white;
-}
-
-.navbar-logo span {
-    margin-left: 5px;
-    margin-right: 5px;
+    color: gray;
 }
 
 .search-bar {
-    height: 35px;
-    width: 400px;
-    background-color: aliceblue;
+    width: 750px;
+    height: 50px;
+    background-color: rgb(243, 243, 243);
     border-radius: 25px;
-    outline: none;
+    border: none;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: center;
-    color: rgb(96, 95, 95);
 }
 
-.log-in-btn {
-    border: 1px solid white;
-    padding: 10px 20px;
-    border-radius: 30px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-
-    color: white;
-}
 .log-in-btn img {
     height: 20px;
 }
+@media (max-width: 1024px) {
+    .nav-fuji-motors {
+        display: none;
+    }
+    .search-bar {
+        width: 800px;
+    }
+}
 
-.log-in-btn p, .log-in-btn span {
-    margin-left: 5px;
-    margin-right: 5px;
+@media (max-width: 426px) {
+    .search-bar {
+        width: 250px;
+    }
 }

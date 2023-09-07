@@ -1,8 +1,8 @@
 import NavBar from "./navBar"
 import CardContainer from "./cardContainer"
-import PageContentHeader from "./pageContentHeader"
 import Separator from "./Separator"
 import Makes from "./Makes"
+import HomeBanner from "./HomeBanner"
 
 const Home = ({ cars }) => {
   return (
@@ -11,10 +11,10 @@ const Home = ({ cars }) => {
           <NavBar />
           <Makes />
         </div>
-        {/* <PageContentHeader />
-        <Separator text={"New arrivals"}/>
+        <HomeBanner />
+        {/* <PageContentHeader /> */}
+        <Separator text={"Featured"}/>
         <CardContainer cars={cars} />
-        <Separator text={"Get in touch with us"}/> */}
     </>
   )
 }
