@@ -1,0 +1,20 @@
+.makes-ul {
+    display: flex;
+    justify-content: space-evenly;
+
+    list-style-type: none;
+    padding: 15px;
+}
+.makes-ul li {
+    padding: 10px 50px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 250ms ease-in-out;
+}
+.makes-ul li:hover {
+    background-color: rgb(164, 164, 164);
+}
+.makes-link {
+    text-decoration: none;
+    color: black;
+}

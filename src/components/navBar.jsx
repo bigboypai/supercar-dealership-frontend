@@ -1,24 +1,28 @@
 import '../styles/navbar.css'
+import menu from '../assets/hamburguer-menu.png'
 
 const navBar = () => {
   return (
     <>
-        <nav className='navbar-parent'>
-            <ul className='navbar-container'>
-                <li className="empty"></li>
-                <li className='navbar-logo'>
-                    <h2>SUPERCAR</h2>
-                    <div className="logo-flags">
-                        <span className="logo-flags--blue"></span>
-                        <span className="logo-flags--white"></span>
-                        <span className="logo-flags--red"></span>
-                    </div>
-                </li>
-                <li>
-                    <img className='navbar-hamburguer-menu' src="https://cdn4.iconfinder.com/data/icons/evil-icons-user-interface/64/menu-512.png"/>
-                </li>
-            </ul>
-        </nav>
+        <section className='navbar-container'>
+            <span className='center-content navbar-logo'>
+                <span> <img className='hamburguer-menu' src={menu}/> </span>
+                <span> <h2> Fuji Motors </h2> </span>
+            </span>
+
+            <span className='search-bar'>
+                <span> Buscar </span>
+                <span>
+                    <img style={{height: '25px'}} src='https://assets.stickpng.com/images/585e4ae1cb11b227491c3393.png'/>
+                </span>
+            </span>
+
+            <span className='log-in-btn'>
+                <img src='https://cdn-icons-png.flaticon.com/512/5509/5509636.png'/>
+                <p> Log In </p>
+            </span>
+        </section>
+        <hr />
     </>
   )
 }
