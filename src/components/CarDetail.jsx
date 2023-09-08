@@ -1,7 +1,8 @@
 import { useParams } from 'react-router-dom'
-import CardDetailCarousel from './CardDetailCarousel';
+import CardDetailGallery from './CardDetailGallery';
 import NavBar from './navBar'
 import Separator from './Separator';
+import CarInfo from './CarInfo';
 import '../styles/CarDetail.css'
 
 function CarDetail({ cars }) {
@@ -18,17 +19,10 @@ function CarDetail({ cars }) {
       <NavBar />
       <Separator text={`${car.car_info.make} ${car.car_info.model} ${car.car_info.year}`}/>
       <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-        <CardDetailCarousel images={images} />
+        <CardDetailGallery images={images} />
       </div>
-      <div className='car-info'>
-        <div className='car-detail-info'>
-          <p>Marca: {car.car_info.make}</p>
-          <p>Model: {car.car_info.model}</p>
-          <p>Odómetro: {car.car_info.odometer} km</p>
-          <p>Año: {car.car_info.year}</p>
-          <p>Transmisión: {car.car_info.transmission}</p>
-        </div>
-        <div> { car.car_info.description ? <p>Descripción: {car.car_info.description}</p> : null } </div>
+      <div>
+        <CarInfo info={car} />
       </div>
     </>
   );

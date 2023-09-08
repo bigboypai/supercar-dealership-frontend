@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Grid } from '@mui/material';
-import CarCard from './CarCard';
+import CarCard from './carCard';
 import { Link } from 'react-router-dom'
 
 
