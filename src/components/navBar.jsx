@@ -6,10 +6,10 @@ const navBar = () => {
   return (
     <>
         <section className='navbar-container'>
-            <span className='center-content navbar-logo'>
+            <a href='/' className='center-content navbar-logo'>
                 <span> <img className='key-menu' src={key}/> </span>
                 <span className='nav-fuji-motors'> <h2> Fuji Motors </h2> </span>
-            </span>
+            </a>
 
             <input type='text' className='search-bar' placeholder={"Buscar vehículos"}>
             </input>

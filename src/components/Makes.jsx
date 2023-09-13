@@ -1,8 +1,8 @@
-import { Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import '../styles/makes.css'
 
 const Makes = () => {
-    const makes = ["Pagani", "Lamborguini", "Ferrari", "Porsche", "Koenigsegg", "Bugatti", "Rolls-Royce", "Bentley"];
+    const makes = ["Pagani", "Lamborguini", "Ferrari", "Porsche", "Koenigsegg", "Bugatti", "Rolls-Royce", "Bentley", "Aston Martin", "Range Rover", "Jaguar"];
     return (
       <>
         <ul className='makes-ul'>
