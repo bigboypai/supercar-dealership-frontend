@@ -1,8 +1,27 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Exotic Car Dealership
 
-Currently, two official plugins are available:
+This project has been created with the main focus of being a cool way to showcase my knowledge and skills to recruiters.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This repo contains all the front-end side of things. For back-end please refer to server and database repo.
+## Tech stack
+
+The main dependencies of this project:
+- vite
+- materialUI
+- React Router
+- React
+## Instalation
+
+To deploy this project run
+
+Install dependencies
+```bash
+  npm install
+```
+
+Runs the app at http://127.0.0.1:5173 (if available)
+
+```bash
+  npm run dev
+```
