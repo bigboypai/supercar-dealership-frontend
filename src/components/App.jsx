@@ -9,7 +9,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/cars');
+        const response = await fetch('https://wild-teal-stingray.cyclic.cloud/api/cars');
         const data = await response.json();
         setCars(data);
       } catch (error) {
